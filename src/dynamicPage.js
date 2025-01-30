@@ -1,7 +1,7 @@
 //dynamicPage.js
 
 // Create a new page with methods to make new element objects and append them
-class DynamicPage {
+export class DynamicPage {
     constructor (name) {
         this.name = name;
         this.pageOrder = [];

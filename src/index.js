@@ -1,8 +1,8 @@
 //index.js
 import "./styles.css";
 
-import {initHome} from "home.js";
+export { DynamicPage } from "./dynamicPage.js";
 
-export { DynamicPage } from "dynamicPage.js";
+import {initHome} from "./home.js";
 
 initHome();

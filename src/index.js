@@ -11,15 +11,15 @@ init_home(); //Default to home page
 function loadContent (initFunction) {
     const page = document.querySelector('div#content');
     page.innerHTML = '';
-    initFunction;
+    initFunction();
 };
 
 const homeButton = document.querySelector("#home");
 homeButton.addEventListener("click", () =>
-    {loadContent(init_home())},
+    {loadContent(init_home)},
 );
 
 const menuButton = document.querySelector("#menu");
 menuButton.addEventListener("click", () =>
-    {loadContent(init_menu())},
+    {loadContent(init_menu)},
 );

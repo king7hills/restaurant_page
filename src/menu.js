@@ -25,6 +25,7 @@ const p2 = menuPage.textElement('p', 'menu_item_cost', '$9.99');
 
 //Page initialization. Loads the pages array, then populates the html with that content. Order matters.
 export function init_menu () {
+    menuPage.pageOrder = [];
     menuPage.pageOrder.push(h1top, h2sub, heroImage, h3MenuItem1, menuItem1image, p1, p2);
     menuPage.loadPage(menuPage.pageOrder);
 }

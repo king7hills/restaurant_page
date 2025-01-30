@@ -41,7 +41,7 @@ export class DynamicPage {
         newImage.src = obj.src;
         newImage.alt = obj.alt;
         if (obj.cssClass !== '') {
-            newElement.classList.add(`${obj.cssClass}`)
+            newImage.classList.add(`${obj.cssClass}`)
         };
         this.pageContent.appendChild(newImage);
     }

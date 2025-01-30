@@ -8,12 +8,18 @@ import {init_menu} from "./menu.js";
 
 init_home(); //Default to home page
 
+function loadContent (initFunction) {
+    const page = document.querySelector('div#content');
+    page.innerHTML = '';
+    initFunction;
+};
+
 const homeButton = document.querySelector("#home");
 homeButton.addEventListener("click", () =>
-    {init_home()},
+    {loadContent(init_home())},
 );
 
 const menuButton = document.querySelector("#menu");
 menuButton.addEventListener("click", () =>
-    {init_menu()},
+    {loadContent(init_menu())},
 );

@@ -9,17 +9,19 @@ export class DynamicPage {
     }
 
 
-    textElement (tag, content) {
+    textElement (tag, cssClass, content) {
         return {
             tag: tag,
+            cssClass: cssClass,
             content: content,
             type: 'text',
         }
     }
 
-    imageElement (src, alt) {
+    imageElement (src, cssClass, alt) {
         return {
             src: src,
+            cssClass: cssClass,
             alt: alt,
             type: 'img',
         }
@@ -28,6 +30,9 @@ export class DynamicPage {
     addTextElement (obj) {
         const newElement = document.createElement(obj.tag);
         newElement.innerHTML = obj.content;
+        if (obj.cssClass !== '') {
+            newElement.classList.add(`${obj.cssClass}`)
+        };
         this.pageContent.appendChild(newElement);
     }
 
@@ -35,6 +40,9 @@ export class DynamicPage {
         const newImage = document.createElement("img");
         newImage.src = obj.src;
         newImage.alt = obj.alt;
+        if (obj.cssClass !== '') {
+            newElement.classList.add(`${obj.cssClass}`)
+        };
         this.pageContent.appendChild(newImage);
     }
 

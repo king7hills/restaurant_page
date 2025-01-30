@@ -5,6 +5,7 @@ export { DynamicPage } from "./dynamicPage.js";
 
 import {init_home} from "./home.js";
 import {init_menu} from "./menu.js";
+import {init_about} from "./about.js";
 
 init_home(); //Default to home page
 
@@ -22,4 +23,9 @@ homeButton.addEventListener("click", () =>
 const menuButton = document.querySelector("#menu");
 menuButton.addEventListener("click", () =>
     {loadContent(init_menu)},
+);
+
+const aboutButton = document.querySelector("#about");
+aboutButton.addEventListener("click", () =>
+    {loadContent(init_about)},
 );

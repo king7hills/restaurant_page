@@ -14,7 +14,7 @@ const p1 = homePage.textElement("p", "firstP", "Welcome traveler");
 const p2text = "Dumping Alice's garbage will most likely lead to run ins with the police.\n $50 fine and picking it up in the snow is what shall happen.\n Hungry?\n Check out our menu."
 const p2 = homePage.textElement("p", "secondP", p2text);
 
-export function initHome () {
+export function init_home () {
     homePage.pageOrder.push(h1top, h2sub, heroImage, p1, p2);
     homePage.loadPage(homePage.pageOrder);
 }
